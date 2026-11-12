@@ -15,3 +15,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### What I learned
+
+- I learned how to create a flutter project directly from VS CODE
+- I learned how to manage the flutter commands
+
+#### What Blocked Me
+
+- Quality of Internet connection
