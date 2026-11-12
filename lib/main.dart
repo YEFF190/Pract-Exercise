@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(seedColor: Colors.green),
       ),
       home: const MyHomePage(title: 'My First App at ICT-U'),
     );
@@ -69,6 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    final width = MediaQuery.of(context).size.width; 
+    debugPrint('Screen width: $width dp');  
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
