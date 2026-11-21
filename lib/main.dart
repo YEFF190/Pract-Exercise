@@ -7,7 +7,7 @@ const CardApp({super.key});
 Widget build(BuildContext context) {
 return MaterialApp(
 theme: ThemeData(
-colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
 ),
 home: Scaffold(
 appBar: AppBar(title: const Text('Profile')),
