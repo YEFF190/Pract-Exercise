@@ -16,13 +16,16 @@ colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
 ),
 home: Scaffold(
   appBar: AppBar(title: const Text('My Items')),
-  body: ListView.builder(
-    itemCount: items.length,
-    itemBuilder: (context, i) => ListTile(
-      leading: const Icon(Icons.star),
-      title: Text(items[i]),
-    ),
+  body: Padding(
+  padding: const EdgeInsets.all(16),
+  child: Row(
+    children: [
+      Expanded(
+        child: Text('A BROAD BROAD BROAD LONG TEXT ' * 5),
+      ),
+    ],
   ),
+),
 ),
 );
 }
