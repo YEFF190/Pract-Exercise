@@ -1,4 +1,4 @@
-
+import 'package:flutter/material.dart';
 
 void main() => runApp(const CardApp());
 class CardApp extends StatelessWidget {
@@ -7,22 +7,26 @@ const CardApp({super.key});
 Widget build(BuildContext context) {
 return MaterialApp(
 theme: ThemeData(
-colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
 ),
 home: Scaffold(
 appBar: AppBar(title: const Text('Profile')),
 body: const Padding(
 padding: EdgeInsets.all(16),
-child: ProfileCard(
-name: 'Amina Ngo',
-role: 'Farmer, Mbalmayo',
-phone: '+237 6 00 00 00 00',
+child: Align(
+  alignment: Alignment.center,
+  child: ProfileCard(
+    name: 'Amina Ngo',
+    role: 'Farmer, Mbalmayo',
+    phone: '+237 6 00 00 00 00',
+  ),
 ),
 ),
 ),
 );
 }
 }
+
 class ProfileCard extends StatelessWidget {
 const ProfileCard({
 super.key,
@@ -46,6 +50,7 @@ const SizedBox(width: 16),
 Expanded(
 child: Column(
 crossAxisAlignment: CrossAxisAlignment.start,
+mainAxisSize: MainAxisSize.min,
 children: [
 Text(name, style: textTheme.titleLarge),
 Text(role),
