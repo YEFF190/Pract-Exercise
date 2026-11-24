@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(const CardApp());
+final items = [
+'Item 1',
+'Item 2',
+'Item 3',
+];
 class CardApp extends StatelessWidget {
 const CardApp({super.key});
 @override
@@ -10,18 +15,14 @@ theme: ThemeData(
 colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
 ),
 home: Scaffold(
-appBar: AppBar(title: const Text('Profile')),
-body: const Padding(
-padding: EdgeInsets.all(16),
-child: Align(
-  alignment: Alignment.center,
-  child: ProfileCard(
-    name: 'Amina Ngo',
-    role: 'Farmer, Mbalmayo',
-    phone: '+237 6 00 00 00 00',
+  appBar: AppBar(title: const Text('My Items')),
+  body: ListView.builder(
+    itemCount: items.length,
+    itemBuilder: (context, i) => ListTile(
+      leading: const Icon(Icons.star),
+      title: Text(items[i]),
+    ),
   ),
-),
-),
 ),
 );
 }
